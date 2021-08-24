@@ -1,0 +1,85 @@
+
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+  
+body {
+    overflow: hidden;
+}
+
+#container {
+display: grid;
+/* grid-gap: 1em; */
+grid-template-rows: repeat(var(--grid-rows), 20px);
+grid-template-columns: repeat(var(--grid-cols), 20px);
+}
+
+.grid-item {
+width: 20px;
+height: 20px;
+border: 1px solid #ddd;
+text-align: center;
+background-color: white;
+}
+
+.grid-item.is-active {
+    background-color: red;
+}
+
+.grid-item.is-blue {
+    background-color: blue;
+}
+
+.color-picker {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    box-shadow: 0px 0px 22px 5px rgba(0,0,0,0.24);
+    background-color: white;
+    transition: opacity .5s;
+}
+
+.color-picker .color {
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+    margin: 0 2px;
+}
+
+.color-active {
+    border: 4px solid black;
+}
+
+.color__red {
+    background-color: red;
+}
+
+.color__blue {
+    background-color: blue;
+}
+
+.color__purple {
+    background-color: purple;
+}
+
+.color__green {
+    background-color: green;
+}
+
+.color__aqua {
+    background-color: aqua;
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.show {
+    opacity: 1;
+    pointer-events: all;
+}
+  
